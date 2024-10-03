@@ -5,9 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bobble AI</title>
     <link rel="stylesheet" href="src/css/index.css">
+
+     <style>
+        /* Added some inline CSS for presentation purposes (ideally should be in your CSS file) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9; /* Softer background color */
+        }
+        header {
+            background-color: #4a90e2; /* Updated background color for header */
+            color: white; /* Ensured text color is readable */
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo span {
+            font-size: 30px; /* Increased logo size */
+            font-weight: bold;
+        }
+        .subtext {
+            font-weight: 300; /* Lighter weight for subtlety */
+            font-size: 24px; /* Slightly smaller subtext */
+        }
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px; /* Added spacing between menu items */
+        }
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px; /* Increased font size for better readability */
+            transition: color 0.3s ease; /* Smooth transition effect */
+        }
+        .menu ul li a:hover {
+            color: #ffd700; /* Added hover effect with gold color */
+        }
+        .buttons a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+        .login {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+        .login:hover {
+            background-color: white;
+            color: #4a90e2; /* Inverted hover effect */
+        }
+        .get-started {
+            background-color: #ffd700; /* Gold color for the Get started button */
+            border: none;
+        }
+        .get-started:hover {
+            background-color: #ffc107; /* Darker gold on hover */
+        }
+    </style>
 </head>
 <body>
-
+    
 <header>
     <div class="container">
         <div class="logo">
