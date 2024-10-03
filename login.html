@@ -18,7 +18,7 @@
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required oninput="check()">
-                <i class="fas fa-eye toggle-password" id="togglePassword" onclick="togglePassword()"></i>
+                <i class="fas fa-eye toggle-password" id="togglePassword" onclick="togglePassword()" title="Show Password"></i>
                 </div>
                 <div id="checks">
                     <div id="checkTitle">The password must:</div>
@@ -44,20 +44,22 @@
     </div>
 
     <script>
-        const togglePassword = () => {
-            const password = document.getElementById('password');
-            const togglePassword = document.getElementById('togglePassword');
+    const togglePassword = () => {
+      const password = document.getElementById('password');
+      const togglePassword = document.getElementById('togglePassword');
 
-            if (password.type === 'password') {
-                password.type = 'text';
-                togglePassword.classList.add('fa-eye-slash');
-                togglePassword.classList.remove('fa-eye');
-            } else {
-                password.type = 'password';
-                togglePassword.classList.add('fa-eye');
-                togglePassword.classList.remove('fa-eye-slash');
-            }
-        }
+      if (password.type === 'password') {
+        password.type = 'text';
+        togglePassword.classList.add('fa-eye-slash');
+        togglePassword.classList.remove('fa-eye');
+        togglePassword.title = "Hide Password"; // Change tooltip to 'Hide Password'
+      } else {
+        password.type = 'password';
+        togglePassword.classList.add('fa-eye');
+        togglePassword.classList.remove('fa-eye-slash');
+        togglePassword.title = "Show Password"; // Change tooltip to 'Show Password'
+      }
+  }
 
         function check(){
             let passed=0;
